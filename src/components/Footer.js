@@ -7,12 +7,12 @@ function Footer () {
             <div>
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Reservations</a></li>
-                    <li><a href="#">Order Online</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Menu</a></li>
+                    <li><a href="/">Reservations</a></li>
+                    <li><a href="/">Order Online</a></li>
+                    <li><a href="/">Login</a></li>
                 </ul>
             </div>
             <div>
@@ -26,8 +26,8 @@ function Footer () {
             <div>
                 <h3>Social Media</h3>
                 <ul>
-                    <li><a>Instagram</a></li>
-                    <li><a>Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
                 </ul>
             </div>
 
