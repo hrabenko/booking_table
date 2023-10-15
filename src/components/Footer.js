@@ -2,7 +2,7 @@ function Footer () {
     return(
         <footer>
             <div>
-                <img src="../images/footer_logo.png" alt="Logo" />
+                <img src="/images/footer_logo.png" alt="Logo" />
             </div>
             <div>
                 <h3>Navigation</h3>
