@@ -1,9 +1,9 @@
 
 function BookingPage () {
     return (
-        <div>
+        <>
 
-        </div>
+        </>
     )
 }
 

@@ -37,7 +37,7 @@ function Testimonials({ photo, name, rating, text }) {
 
 function HomePage () {
     return (
-        <div>
+        <>
             <section className="call-to-action">
                 <div>
                     <h1>Little Lemon</h1>
@@ -96,7 +96,7 @@ function HomePage () {
                     />
                 </div>
             </section>
-        </div>
+        </>
     )
 }
 
