@@ -50,7 +50,7 @@ function HomePage () {
                     <h1>Little Lemon</h1>
                     <h3>Chicago</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button onClick={handleButtonClick}>Reserve a table</button>
+                    <button aria-label="On Click" onClick={handleButtonClick}>Reserve a table</button>
                 </div>
                 <img src="images/restauranfood.jpg" alt='Image of food'/>
             </section>

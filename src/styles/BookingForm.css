@@ -38,8 +38,12 @@ option {
     margin-top: 15px;
 }
 
-#btn:active {
+.btn:active {
     background-color: #ee9972;
+}
+
+.btn:disabled {
+    background-color: #b8bbba;
 }
 
 .booking-container {
