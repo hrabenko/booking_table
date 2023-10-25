@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "../styles/Footer.css";
 function Footer () {
     return(
         <footer>
@@ -12,7 +12,7 @@ function Footer () {
                         <li><a href="/">Home</a></li>
                         <li><a href="/">About</a></li>
                         <li><a href="/">Menu</a></li>
-                        <li><a href="/">Reservations</a></li>
+                        <li><a href="/booking">Reservations</a></li>
                         <li><a href="/">Order Online</a></li>
                         <li><a href="/">Login</a></li>
                     </ul>

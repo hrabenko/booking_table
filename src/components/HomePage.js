@@ -1,4 +1,5 @@
-import "./HomePage.css"
+import "../styles/HomePage.css"
+import { useNavigate } from 'react-router-dom';
 
 function Special({ name, price, description, src}) {
     return (
@@ -36,6 +37,12 @@ function Testimonials({ photo, name, rating, text }) {
 }
 
 function HomePage () {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/booking');
+    };
+
     return (
         <>
             <section className="call-to-action">
@@ -43,7 +50,7 @@ function HomePage () {
                     <h1>Little Lemon</h1>
                     <h3>Chicago</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button>Reserve a table</button>
+                    <button onClick={handleButtonClick}>Reserve a table</button>
                 </div>
                 <img src="images/restauranfood.jpg" alt='Image of food'/>
             </section>

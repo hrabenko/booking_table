@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-#booking img {
+#booking .restaurant-img {
     width: 500px;
     border-radius: 20px;
     object-fit: cover;
@@ -34,7 +34,7 @@
         flex-direction: column;
     }
 
-    #booking img {
+    #booking .restaurant-img {
         width: 75%;
         margin-right: 0;
         margin-bottom: 20px;

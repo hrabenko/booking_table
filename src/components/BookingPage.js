@@ -1,12 +1,15 @@
 import BookingForm from "./BookingForm";
-import "./BookingPage.css";
-function BookingPage () {
+import "../styles/BookingPage.css";
+import {useState} from "react";
+
+function BookingPage (props) {
+
     return (
         <div id="booking">
             <h1>Book a table</h1>
             <div id="booking-container">
-                <img src="images/restaurant.jpg" />
-                <BookingForm />
+                <img className='restaurant-img' src="images/restaurant.jpg" />
+                <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} />
             </div>
         </div>
     )

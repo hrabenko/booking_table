@@ -1,0 +1,84 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 406px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #edefee;
+}
+
+input,
+select,
+option {
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 2px #b8bbba;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 8px;
+    margin-bottom: 15px;
+    background-color: #edefee;
+    color: #495E57;
+    font-family: 'Karla', serif;
+    text-align: center;
+}
+
+.btn {
+    background: #F4CE14;
+    color: #000;
+    box-shadow: none;
+    height: 50px;
+    margin-top: 15px;
+}
+
+#btn:active {
+    background-color: #ee9972;
+}
+
+.booking-container {
+    background-color: #edefee;
+    color: #495E57;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+
+}
+
+.success-container {
+    height: 406px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    background-color: #edefee;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.image-container img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+#success-title {
+    text-align: center;
+    width: 300px;
+    color: black;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
