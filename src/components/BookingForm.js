@@ -1,6 +1,10 @@
 import {useState} from "react";
 import "../styles/BookingForm.css";
 import {useNavigate} from "react-router-dom";
+import Success from '../images/success.svg';
+import SuccessMessage from "./SuccessMessage";
+import PersonalInfoForm from "./PersonalInfoForm";
+import ReservationForm from "./ReservationForm";
 
 function BookingForm(props) {
     const navigate = useNavigate();
@@ -41,7 +45,7 @@ function BookingForm(props) {
 
     const handleReservation = (e) => {
         e.preventDefault();
-        props.dispatch({ type: 'REMOVE_TIME', payload: time });
+        props.dispatch({type: 'REMOVE_TIME', payload: time});
         setFormState("personal");
     }
 
@@ -75,7 +79,7 @@ function BookingForm(props) {
             }
         } else {
             if (
-                fullName &&validateEmail(email)
+                fullName && validateEmail(email)
             ) {
                 return true;
             }
@@ -85,57 +89,34 @@ function BookingForm(props) {
 
     if (formState === "reservation") {
         return (
-            <form onSubmit={handleReservation}>
-                <label htmlFor="res-date" >Choose date</label>
-                <input type="date" id="res-date" aria-label="On Change" title="Reqired and the selected date must be in the future" onChange={dateChange} value={date}  />
-                <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" aria-label="On Change" onChange={timeChange} title="Required">
-                    {props.availableTimes.map((elem) => <option key={elem}>{elem}</option>)}
-                </select>
-                <label htmlFor="guests" >Number of guests</label>
-                <input type="number" aria-label="On Change" title="Required" value={guests} onChange={guestsChange} placeholder="1" min="1" max="10" id="guests"  />
-                <label htmlFor="occasion">Occasion</label>
-                <select id="occasion" aria-label="On Change" title="Required" onChange={occasionChange}  >
-                    {occasionOptions.map((elem) => {
-                        if (elem === occasion) {
-                            return <option key={elem} selected>{elem}</option>
-                        }
-                        return <option key={elem}>{elem}</option>
-                    })}
-                </select>
-                <input id="form-button" aria-label="On Click" disabled={!getIsFormValid()} className="btn" type="submit" value="Make Your reservation"/>
-            </form>
+            <ReservationForm handleReservation={handleReservation}
+                             dateChange={dateChange}
+                             date={date}
+                             timeChange={timeChange}
+                             availableTimes={props.availableTimes}
+                             guestsChange={guestsChange}
+                             occasionChange={occasionChange}
+                             occasionOptions={occasionOptions}
+                             occasion={occasion}
+                             getIsFormValid={getIsFormValid}/>
         )
     } else if (formState === "personal") {
         return (
-            <form onSubmit={handlePersonal}>
-                <div className="booking-container">
-                    <h4>Date and time:</h4>
-                    <p>{date} {time}</p>
-                    <h4>Number of guests:</h4>
-                    <p>{guests}</p>
-                    <h4>Occasion:</h4>
-                    <p>{occasion}</p>
-                </div>
-                <label htmlFor="fullname">Full Name</label>
-                <input type="text" aria-label="On Change" id="fullname"  title="Required" value={fullName} onChange={fullnameChange}  />
-                <label htmlFor="email">Email</label>
-                <input type="email" aria-label="On Change" id="email"  title="Required" value={email} onChange={emailChange}  />
-                <input id="personal-button" aria-label="On Click"  disabled={!getIsFormValid()} className="btn" type="submit" value="Submit"/>
-            </form>
+            <PersonalInfoForm handlePersonal={handlePersonal}
+                              date={date}
+                              time={time}
+                              guests={guests}
+                              occasion={occasion}
+                              fullnameChange={fullnameChange}
+                              emailChange={emailChange}
+                              getIsFormValid={getIsFormValid}
+                              fullName={fullName} email={email}/>
         )
     } else if (formState === "success") {
         return (
-            <div className="success-container">
-                <div className="image-container">
-                    <img src="images/success.svg" className="success-image" alt="success" />
-                    <h2 id="success-title">The table has been successfully booked</h2>
-                    <input id="home-button" aria-label="On Click" onClick={handleHome} className="btn" type="submit" value="Home"/>
-                </div>
-            </div>
+            <SuccessMessage handleHome={handleHome}/>
         )
     }
-
 
 
 }

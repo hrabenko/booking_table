@@ -1,16 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from "./HomePage";
-import BookingPage from "./BookingPage";
-import {useState, useReducer} from "react";
+import HomePage from "../pages/HomePage";
+import BookingPage from "../pages/BookingPage";
+import {useReducer} from "react";
 import { fetchAPI } from "../bookingAPI";
 
-
-const reducer = (state, action) => {
-    if (action.type === 'REMOVE_TIME') {
-        return state.filter(time => time !== action.payload);
-    }
-    return state;
-}
 
 function Main () {
     function updateTimes(date) {

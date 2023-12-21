@@ -1,6 +1,6 @@
-import BookingForm from "./BookingForm";
+import BookingForm from "../components/BookingForm";
 import "../styles/BookingPage.css";
-import {useState} from "react";
+import Restaurant from '../images/restaurant.jpg';
 
 function BookingPage (props) {
 
@@ -8,7 +8,7 @@ function BookingPage (props) {
         <div id="booking">
             <h1>Book a table</h1>
             <div id="booking-container">
-                <img className='restaurant-img' src="images/restaurant.jpg" />
+                <img className='restaurant-img' src={Restaurant} />
                 <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} />
             </div>
         </div>

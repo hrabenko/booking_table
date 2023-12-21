@@ -1,9 +1,11 @@
 import "../styles/Footer.css";
+import FooterLogo from '../images/footer_logo.png';
+
 function Footer () {
     return(
         <footer>
             <div>
-                <img className="footer_logo" src="/images/footer_logo.png" alt="Logo" />
+                <img className="footer_logo" src={FooterLogo} alt="Logo" />
             </div>
             <div className="list-containers">
                 <div>
