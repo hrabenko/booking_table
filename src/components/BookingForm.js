@@ -92,6 +92,7 @@ function BookingForm(props) {
             <ReservationForm handleReservation={handleReservation}
                              dateChange={dateChange}
                              date={date}
+                             guests={guests}
                              timeChange={timeChange}
                              availableTimes={props.availableTimes}
                              guestsChange={guestsChange}

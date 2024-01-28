@@ -2,6 +2,7 @@ export default function ReservationForm({
                                             handleReservation,
                                             dateChange,
                                             date,
+                                            guests,
                                             timeChange,
                                             availableTimes,
                                             guestsChange,
@@ -20,7 +21,7 @@ export default function ReservationForm({
                 {availableTimes.map((elem) => <option key={elem}>{elem}</option>)}
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input type="number" aria-label="On Change" title="Required" value={timeChange} onChange={guestsChange}
+            <input type="number" aria-label="On Change" title="Required" value={guests} onChange={guestsChange}
                    placeholder="1" min="1" max="10" id="guests"/>
             <label htmlFor="occasion">Occasion</label>
             <select id="occasion" aria-label="On Change" title="Required" onChange={occasionChange}>
